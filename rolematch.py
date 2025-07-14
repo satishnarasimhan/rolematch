@@ -24,8 +24,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def read_pdf_resume(pdf_doc):
     resource_manager = PDFResourceManager()
-    fake_file_handle = io.StringIO()
-    converter = TextConverter(resource_manager, fake_file_handle)
+    file_handle = io.StringIO()
+    converter = TextConverter(resource_manager, file_handle)
     page_interpreter = PDFPageInterpreter(resource_manager, converter)
     
     with open(pdf_doc, 'rb') as fh:
@@ -34,11 +34,11 @@ def read_pdf_resume(pdf_doc):
                                       check_extractable=True):
             page_interpreter.process_page(page)
             
-        text = fake_file_handle.getvalue()
+        text = file_handle.getvalue()
     
     # Close open handles as good practice
     converter.close()
-    fake_file_handle.close()
+    file_handle.close()
     
     if text:
         return text
