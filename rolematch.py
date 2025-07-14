@@ -18,7 +18,7 @@ from pdfminer.pdfpage import PDFPage
 from nltk.corpus import stopwords
 set(stopwords.words('english'))
 
-# Vector functions and Cosine Similaarity for match analysis from scikit-learn
+# Vector functions and Cosine Similarity for match analysis from scikit-learn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
