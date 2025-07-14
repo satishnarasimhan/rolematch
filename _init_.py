@@ -14,9 +14,9 @@ if __name__ == '__main__':
 
     file_path = Path.cwd()
     print("Current Working Directory:", file_path)
-    print("Choose: 1 if you want ascertain the match against a resume\n")
+    print("Choose: 1 if you want to ascertain the match against a resume\n")
     
-    print("Choose: 2 if you want ascertain the match against a job description\n")
+    print("Choose: 2 if you want to ascertain the match against a job description\n")
 
     choice = input ("Enter you choice :")
     if choice == '1':
