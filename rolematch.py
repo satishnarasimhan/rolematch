@@ -42,9 +42,7 @@ def read_pdf_resume(pdf_doc):
     
     if text:
         return text
-   
-   
-
+      
 def get_percentage_match(text):
     cv = CountVectorizer(stop_words='english')
     count_matrix = cv.fit_transform(text)
